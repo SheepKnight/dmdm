@@ -1,0 +1,10 @@
+{
+  "behaviors": {
+    "ManagerBehavior": {
+      "scriptId": "3",
+      "line": 0,
+      "parentBehavior": null,
+      "properties": []
+    }
+  }
+}

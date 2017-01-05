@@ -1,0 +1,30 @@
+{
+  "nextEntryId": 10,
+  "nodes": [
+    {
+      "id": "1",
+      "name": "InGame",
+      "type": "scene"
+    },
+    {
+      "id": "3",
+      "name": "Manager",
+      "type": "script"
+    },
+    {
+      "id": "4",
+      "name": "Test",
+      "type": "cubicModel"
+    },
+    {
+      "id": "5",
+      "name": "Font",
+      "type": "font"
+    },
+    {
+      "id": "7",
+      "name": "Phone",
+      "type": "cubicModel"
+    }
+  ]
+}
