@@ -39,8 +39,11 @@ class ManagerBehavior extends Sup.Behavior{
     let hitLane2 = ray.intersectActor(this.lane2)
     let hitLane3 = ray.intersectActor(this.lane3)
     
-    this.player.setZ( -1 + -2*this.currentLane  )
+    this.player.setZ( -1 + -2 * this.currentLane - (this.currentLane - this.targetLane)*2*(this.playerCooldown / this.playerSpeed) )
+    
     if(this.playerCooldown == 0){
+      this.player.setZ( -1 + -2*this.currentLane  )
+    
       if(this.targetLane != 0){
         this.currentLane = this.targetLane
         this.targetLane = 0;
