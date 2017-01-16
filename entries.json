@@ -1,5 +1,5 @@
 {
-  "nextEntryId": 10,
+  "nextEntryId": 17,
   "nodes": [
     {
       "id": "1",
@@ -7,8 +7,18 @@
       "type": "scene"
     },
     {
+      "id": "10",
+      "name": "AppTiles",
+      "type": "tileSet"
+    },
+    {
       "id": "3",
       "name": "Manager",
+      "type": "script"
+    },
+    {
+      "id": "11",
+      "name": "Game",
       "type": "script"
     },
     {
@@ -24,6 +34,26 @@
     {
       "id": "7",
       "name": "Phone",
+      "type": "cubicModel"
+    },
+    {
+      "id": "12",
+      "name": "Player",
+      "type": "cubicModel"
+    },
+    {
+      "id": "16",
+      "name": "Lane1",
+      "type": "cubicModel"
+    },
+    {
+      "id": "14",
+      "name": "Lane2",
+      "type": "cubicModel"
+    },
+    {
+      "id": "15",
+      "name": "Lane3",
       "type": "cubicModel"
     }
   ]
