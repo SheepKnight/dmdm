@@ -1,5 +1,5 @@
 {
-  "nextEntryId": 17,
+  "nextEntryId": 20,
   "nodes": [
     {
       "id": "1",
@@ -55,6 +55,25 @@
       "id": "15",
       "name": "Lane3",
       "type": "cubicModel"
+    },
+    {
+      "id": "18",
+      "name": "Assets",
+      "type": null,
+      "children": [
+        {
+          "id": "19",
+          "name": "Obstalces",
+          "type": null,
+          "children": [
+            {
+              "id": "17",
+              "name": "Obstacle1",
+              "type": "cubicModel"
+            }
+          ]
+        }
+      ]
     }
   ]
 }

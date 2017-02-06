@@ -1,4 +1,6 @@
 class ManagerBehavior extends Sup.Behavior{
+  private obstacleId : number = 0;
+  private obstacleCooldown : number = Sup.Math.Random.integer(60, 90);
   private lastPauseStatus : boolean = false;
   private player = Sup.getActor("Player");
   private lane1 = Sup.getActor("Lane1");
@@ -29,6 +31,26 @@ class ManagerBehavior extends Sup.Behavior{
   }
 
   onNotPaused() {
+    
+    Sup.getActor("Light").light.setTarget(Sup.getActor("Player").getPosition())
+    if(this.obstacleCooldown == 0){
+      
+      this.obstacleCooldown = Sup.Math.Random.integer(115, 280);
+      let lane = Sup.Math.Random.integer(1, 3);
+      let object = new Sup.Actor("Obstacle"+ this.obstacleId, Sup.getActor("Obstacles"))
+      object.cubicModelRenderer = new Sup.CubicModelRenderer(object, "Assets/Obstalces/Obstacle" + Sup.Math.Random.integer(1,1), Sup.CubicModelRenderer.MaterialType.Phong)
+      object.setPosition(new Sup.Math.Vector3(12, -1, - 1 +(lane)*-2));
+//Assets/Obstalces/Obstacle1
+    }else{
+      
+      this.obstacleCooldown--
+      
+    }
+    
+    Sup.getActor("Obstacles").getChildren().forEach(function(actor){
+      actor.setX(actor.getX() - 0.05)
+    })
+    
     Sup.log(this.player.getZ())
     //Sup.log(this.player.getZ())
     //tracing ray and checking if it touches the phone or the player.
@@ -39,7 +61,7 @@ class ManagerBehavior extends Sup.Behavior{
     let hitLane2 = ray.intersectActor(this.lane2)
     let hitLane3 = ray.intersectActor(this.lane3)
     
-    this.player.setZ( -1 + -2 * this.currentLane - (this.currentLane - this.targetLane)*2*(this.playerCooldown / this.playerSpeed) )
+    this.player.setZ( -1 + (-2 * this.currentLane))
     
     if(this.playerCooldown == 0){
       this.player.setZ( -1 + -2*this.currentLane  )

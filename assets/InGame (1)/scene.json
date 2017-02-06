@@ -375,6 +375,89 @@
       "visible": true,
       "layer": 0,
       "prefab": null
+    },
+    {
+      "id": "13",
+      "name": "Obstacles",
+      "children": [],
+      "components": [],
+      "position": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "orientation": {
+        "x": 0,
+        "y": 0,
+        "z": 0,
+        "w": 1
+      },
+      "scale": {
+        "x": 1,
+        "y": 1,
+        "z": 1
+      },
+      "visible": true,
+      "layer": 0,
+      "prefab": null
+    },
+    {
+      "id": "14",
+      "name": "Light",
+      "children": [],
+      "components": [
+        {
+          "type": "Light",
+          "config": {
+            "formatVersion": 2,
+            "type": "spot",
+            "color": "ffffff",
+            "intensity": 1,
+            "distance": 0,
+            "angle": 60,
+            "target": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            },
+            "castShadow": false,
+            "shadowMapSize": {
+              "width": 512,
+              "height": 512
+            },
+            "shadowBias": 0,
+            "shadowCameraNearPlane": 0.1,
+            "shadowCameraFarPlane": 1000,
+            "shadowCameraFov": 50,
+            "shadowCameraSize": {
+              "top": 100,
+              "bottom": -100,
+              "left": -100,
+              "right": 100
+            }
+          },
+          "id": "0"
+        }
+      ],
+      "position": {
+        "x": -9.048578262329102,
+        "y": 3.5046234130859375,
+        "z": -5.509059906005859
+      },
+      "orientation": {
+        "x": 0,
+        "y": 0,
+        "z": 0,
+        "w": 1
+      },
+      "scale": {
+        "x": 1,
+        "y": 1,
+        "z": 1
+      },
+      "visible": true,
+      "layer": 0,
+      "prefab": null
     }
   ]
 }
